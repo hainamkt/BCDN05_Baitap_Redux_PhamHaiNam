@@ -1,9 +1,9 @@
 import { combineReducers, createStore } from 'redux'
 
-const RootReducer = combineReducers({
-    // oanTuTiReducer:(state) =>{
-    //     return state
-    // }
+import {gameOanTuTiReducer} from './OanTuTiReducer'
+
+const rootReducer = combineReducers({
+    gameOanTuTiReducer,
 })
 
-export const store = createStore(RootReducer)
+export const store = createStore(rootReducer)

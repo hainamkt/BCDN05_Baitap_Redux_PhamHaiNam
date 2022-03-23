@@ -1,4 +1,28 @@
-/* .GameOanTuTi{
+.GameOanTuTi{
     background-image: url(../../public/img/OanTuTi/bgGame.png);
     height: 100vh;
-} */
+    overflow: hidden;
+    padding: 50px 0;
+}
+.GameOanTuTi img{
+    width: 100px;
+}
+.GameOanTuTi .text{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(192, 238, 27);
+}
+.GameOanTuTi p{
+    font-size: 2rem;
+    color: rgb(0, 255, 170);
+}
+.GameOanTuTi .luaChon img{
+    width: 55px;
+}
+.GameOanTuTi .btn-success{
+    padding: 15px 25px;
+}
+.GameOanTuTi .item img{
+    background-color: aqua;
+    border: solid 2px;
+}
