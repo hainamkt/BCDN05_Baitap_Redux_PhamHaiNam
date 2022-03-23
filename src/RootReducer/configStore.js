@@ -1,6 +1,6 @@
 import { combineReducers, createStore } from 'redux'
 
-import {gameOanTuTiReducer} from './OanTuTiReducer'
+import { gameOanTuTiReducer } from './OanTuTiReducer'
 
 const rootReducer = combineReducers({
     gameOanTuTiReducer,

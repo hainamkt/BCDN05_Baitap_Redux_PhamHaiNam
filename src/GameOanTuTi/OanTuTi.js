@@ -10,8 +10,8 @@ export default class OanTuTi extends Component {
   render() {
     return (
       <div className='container-fluid text-center GameOanTuTi'>
-          <DatCuoc/>
-          <KetQua/>
+        <DatCuoc />
+        <KetQua />
       </div>
     )
   }

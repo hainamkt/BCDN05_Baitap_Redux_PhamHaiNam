@@ -24,7 +24,7 @@ class KetQua extends Component {
   }
 
   render() {
-    let { banChon, soVanThang, soVanChoi } = this.props.cacLuaChon
+    let { banChon, soVanThang, soVanChoi, soVanHoa, soVanThua } = this.props.cacLuaChon
     return (
       <div className='row'>
         <div className="col">
@@ -36,10 +36,12 @@ class KetQua extends Component {
         <div className="col">
           <p>Bạn chọn: <span className='pl-2'>{banChon}</span></p>
           <p>Số ván thắng: <span className='pl-2'>{soVanThang}</span></p>
+          <p>Số ván hòa: <span className='pl-2'>{soVanHoa}</span></p>
+          <p>Số ván thua: <span className='pl-2'>{soVanThua}</span></p>
           <p>Số ván chơi: <span className='pl-2'>{soVanChoi}</span> </p>
           <button className='btn btn-success mt-3' onClick={() => {
             let action = {
-              type:'PLAY_GAME'
+              type: 'PLAY_GAME'
             }
             this.props.dispatch(action)
           }}>PLAY GAME</button>

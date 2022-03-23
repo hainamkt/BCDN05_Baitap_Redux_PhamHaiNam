@@ -3,8 +3,9 @@ let gameOanTuTi = {
     imgChon: './img/OanTuTi/1.png',
     imgRandom: './img/OanTuTi/2.png',
     soVanThang: 0,
-    soVanChoi: 0,
     soVanHoa: 0,
+    soVanThua: 0,
+    soVanChoi: 0,
     mangLuaChon: [
         { hinh: './img/OanTuTi/1.png', chonLua: 'Kéo', diem: 1 },
         { hinh: './img/OanTuTi/2.png', chonLua: 'Búa', diem: 2 },
@@ -24,14 +25,12 @@ export const gameOanTuTiReducer = (state = gameOanTuTi, action) => {
             let hinh = `./img/OanTuTi/${int}.png`;
             state.imgRandom = hinh;
 
-            if (state.banChon === 'Kéo' && int === 3) {
+            if ((state.banChon === 'Kéo' && int === 3) || (state.banChon === 'Búa' && int === 1) || (state.banChon === 'Bao' && int === 2)) {
                 state.soVanThang++;
-            } else if (state.banChon === 'Búa' && int === 1) {
-                state.soVanThang++;
-            } else if (state.banChon === 'Bao' && int === 2) {
-                state.soVanThang++;
-            } else {
+            } else if ((state.banChon === 'Kéo' && int === 1) || (state.banChon === 'Búa' && int === 2) || (state.banChon === 'Bao' && int === 3)) {
                 state.soVanHoa++;
+            } else {
+                state.soVanThua++;
             }
             state.soVanChoi++;
 
